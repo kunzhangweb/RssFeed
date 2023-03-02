@@ -13,7 +13,6 @@ export class FeedComponent {
   constructor() {}
 
   get articleDate() {
-    // const dateFormat = { month: 'long', day: 'numeric', year: 'numeric' };
     return new Date(this.date);
   }
 }
