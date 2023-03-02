@@ -1,0 +1,26 @@
+<div>
+  <h1 class="text-xl text-center font-semibold mt-6">
+    RSS Feed From Tech Crunch
+  </h1>
+  <hr class="mt-2 mb-4" />
+  <div class="w-3/4 max-w-lg border mx-auto p-6 rounded-xl">
+    <!-- Tech Crunch Logo -->
+    <div
+      class="bg-orange-50 felx flex-col items-center rounded-lg py-6 px-4 mb-5"
+    >
+      <img
+        src="
+       https://i.piano.io/managedservices/techCrunch/techcrunch-plus-logo--green.svg"
+        alt="tech crunch rss feed"
+      />
+    </div>
+    <div *ngFor="let article of articles; let i = index">
+      <app-feed
+        [title]="article.item.title"
+        [link]="article.item.link"
+        [date]="article.item.pubDate"
+      ></app-feed>
+    </div>
+  </div>
+  <!-- end of the feed list -->
+</div>
